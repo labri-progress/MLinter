@@ -1,0 +1,7 @@
+{
+  "name": "lint-dependencies",
+  "version": "1.0.0",
+  "devDependencies": {
+    "eslint": "^8.5.0"
+  }
+}
