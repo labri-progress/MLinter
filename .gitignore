@@ -1,6 +1,8 @@
 .idea/
 output/
+results/
 
 .env
 .DS_STORE
-
+.RData
+.Rhistory

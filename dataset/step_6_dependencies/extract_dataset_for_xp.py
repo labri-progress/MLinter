@@ -15,7 +15,7 @@ random_state = 20221118
 np.random.seed(random_state)
 random.seed(random_state)
 
-DATA_PATH = './output/result/data'
+DATASET_PATH = './output/result/dataset'
 FILES_ANALYSED_FILENAME = './output/result/files.csv'
 LOGS_PATH = './output/logs'
 REPO_PATH = './output/tmp'
@@ -55,7 +55,7 @@ def extract_dataset_for_rule_ids(rule_ids, database):
             for size in SIZES:
                 logging.debug(f'\t\tSize {size}')
 
-                dataset_path = os.path.join(DATA_PATH, rule_id, str(conf), str(size))
+                dataset_path = os.path.join(DATASET_PATH, rule_id, str(conf), str(size))
                 train_path = dataset_path + '/train'
                 os.makedirs(train_path, exist_ok=True)
                 balanced_corpus_validation_path = dataset_path + '/balanced_corpus_validation'

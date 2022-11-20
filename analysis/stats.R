@@ -2,10 +2,11 @@ library(ggplot2)
 library(readr)
 
 options(scipen=999)
-#format(summary(caps), big.mark = ",")
 
-stats_file <- '/Users/clatappy/Documents/Thèse/MLinter/221021/ratio.csv'
-output_folder <- '/Users/clatappy/Documents/Thèse/MLinter/221021/'
+stats_file <- 'ratio.csv'
+output_folder <- 'output'
+
+total_numbers_of_line <- 33213474
 
 seed <- 18112022
 
@@ -44,7 +45,7 @@ plot <- ggplot(data, aes(x = c('rule'), y = number)) +
     limits = c(1000, 4000000),
     labels = c('1k', '10k', '100k', '1m', '4m'),
     sec.axis = sec_axis(
-      ~ . / 33213474 * 100,
+      ~ . / total_numbers_of_line * 100,
       name = 'Ratio of non-compliant examples',
       breaks = c(0.003, 0.03, 0.3, 1, 6, 12),
       labels = c('0.003', '0.03', '0.3', '1', '6', '12')
