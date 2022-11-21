@@ -2,7 +2,7 @@ library(effectsize)
 library(ggplot2)
 library(readr)
 
-input_folder <- 'results'
+input_folder <- 'results/'
 output_folder <- 'output'
 
 validation_methods <- c('balanced_corpus', 'ground_truth_with_violation')
